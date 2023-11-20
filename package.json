@@ -2,15 +2,24 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "bash build/run-dev.sh",
+    "opt-dev": "bash build/run-dev.sh --opt",
     "start": "next start"
   },
   "dependencies": {
+    "my-rust-lib": "file:my-rust-lib/pkg",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "wasm-lib": "file:my-rust-lib/pkg"
   },
   "engines": {
     "node": ">=18"
+  },
+  "main": "index.js",
+  "devDependencies": {
+    "@types/node": "20.9.2",
+    "@types/react": "18.2.37",
+    "typescript": "5.2.2"
   }
 }
