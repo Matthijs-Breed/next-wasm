@@ -18,6 +18,28 @@ pub fn fibonacci(n: u32) -> u32 {
 }
 
 #[wasm_bindgen]
+pub fn next_prime(number: u32) -> u32 {
+    let mut next_prime = number + 1;
+    loop {
+        if is_prime(next_prime) {
+            return next_prime;
+        }
+        next_prime += 1;
+    }
+}
+
+fn is_prime(number: u32) -> bool {
+    let mut i = 2;
+    while i < number {
+        if number % i == 0 {
+            return false;
+        }
+        i += 1;
+    }
+    true
+}
+
+#[wasm_bindgen]
 pub fn count(i: usize) -> usize {
     return CALL_COUNT.fetch_add(i, Ordering::SeqCst) + i;
 }
