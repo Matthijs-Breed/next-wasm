@@ -1,1 +1,0 @@
-/home/matthijs/Programming/Next-Rust-Canvas-WASM/next-wasm/my-rust-lib/target/wasm32-unknown-unknown/release/my_rust_lib.wasm: /home/matthijs/Programming/Next-Rust-Canvas-WASM/next-wasm/my-rust-lib/src/lib.rs
